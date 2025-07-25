@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manger Reader</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <button id="sidebar-toggle">☰</button>
+        <h1>Manger Reader</h1>
+        <button id="upload">Upload ZIP</button>
+        <button id="upload-image">Upload Image</button>
+        <button id="select-folder">Select Folder</button>
+        <button id="scroll">Scroll Comics</button>
+        <button id="page-turn">Page-Turning</button>
+        <button id="save-pdf">Save As PDF</button>
+        <button id="clear">Clear Queue</button>
+        <button id="theme-toggle"></button>
+        <button id="fullscreen-toggle"></button>
+    </header>
+    <div id="controls-nav">
+        <button id="prev">Last Page</button>
+        <button id="zoom-out">-</button>
+        <button id="zoom-in">+</button>
+        <button id="fit-to-page"></button>
+        <button id="next">Next Page</button>
+    </div>
+    <div id="container">
+        <div id="sidebar"></div>
+        <div id="viewer"></div>
+    </div>
+    <input type="file" id="file-input" style="display: none;" accept=".zip">
+    <input type="file" id="image-input" style="display: none;" accept=".jpg,.jpeg,.png,.gif,.webp" multiple>
+    <input type="file" id="folder-input" style="display: none;" webkitdirectory directory multiple>
+</body>
+</html>
